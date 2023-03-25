@@ -1,0 +1,17 @@
+{
+  "name": "bhagavad-gita-new-tab",
+  "version": "1.0.0",
+  "description": "",
+  "main": "background.js",
+  "scripts": {
+    "build": "npx tailwindcss -i ./styles/css/main.css -o ./styles/dist/style.css",
+    "cssdev": "npx tailwindcss -i ./styles/css/main.css -o ./styles/dist/style.css --watch"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "tailwindcss": "^3.2.4",
+    "@indic-transliteration/sanscript": "^1.2.8"
+  }
+}

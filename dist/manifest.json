@@ -1,0 +1,19 @@
+{
+  "manifest_version": 3,
+  "name": "Bhagavad Gita New Tab",
+  "description": "A beautiful verse from the Bhagavad Gita every time you open a new tab.",
+  "version": "1.0",
+  "chrome_url_overrides": {
+    "newtab": "index.html"
+  },
+  "author": "sameeramurthydev@gmail.com",
+  "offline_enabled": true,
+  "options_page": "index.html#options",
+  "background": {
+    "service_worker": "background.js"
+  },
+  "host_permissions": [
+    "https://raw.githubusercontent.com/*"
+  ],
+  "permissions": ["scripting", "activeTab", "storage"]
+}

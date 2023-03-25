@@ -1,0 +1,95 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+    font-family: "Source Sans Pro" !important;
+}
+
+input[type="number"], input[type="color"], input[type="text"], select {
+    @apply block w-auto transition-all p-2 focus:ring-1 focus:ring-orange-500 focus:border-orange-500 focus:outline-none rounded-md bg-slate-50 border-2 border-slate-300;
+}
+
+button, #close {
+    @apply mr-3 inline-block px-4 py-2 text-sm font-medium leading-5 text-center text-white transition-colors duration-150 border border-transparent rounded-md bg-orange-500 active:bg-orange-600 hover:bg-orange-600 focus:outline-none;
+}
+
+input[type="checkbox"] {
+    @apply inline-block appearance-none h-4 w-4 border-2 mb-0 mr-2 border-slate-300 rounded-md bg-white checked:bg-orange-500 checked:border-transparent focus:outline-none;
+} 
+
+label {
+    @apply inline-block mt-3 mb-2 text-base;
+}
+
+#modal {
+    @apply fixed top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 bg-white rounded-md shadow-xl p-5 w-1/3;
+}
+
+#overlay {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(0, 0, 0, 0.5);
+    transition: opacity 200ms;
+}
+
+#settings:not(:target) {
+    @apply hidden;
+}
+
+h1 {
+    @apply text-2xl font-bold mb-3 mt-2;
+}
+
+.cb {
+    @apply block;
+}
+
+.options {
+    @apply my-5;
+}
+
+#save, #close {
+    @apply text-sm;
+}
+
+main {
+    @apply mx-auto max-w-3xl my-48;
+}
+
+#verse {
+    @apply text-center p-5;
+}
+
+#verse-text {
+    @apply text-4xl font-bold text-gray-100 my-4;
+}
+
+#verse-meaning {
+    @apply text-2xl text-gray-300 my-4;
+}
+
+#verse-number {
+    @apply text-lg font-bold text-orange-600 my-4;
+}
+
+#verse-number::before {
+    content: "— Bhagavad Gīta ";
+}
+
+#settingsButton {
+    @apply absolute top-0 right-0 m-5;
+}
+
+body {
+    background-image: url("../../assets/png2.jpg");
+    background-color: rgba(0, 0, 0, 0.733);
+    background-blend-mode: multiply;
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 100%;
+    overflow: hidden;
+}
